@@ -200,11 +200,9 @@ class HurtState extends State {
 
 class CircularState extends State {
     enter(scene, hero) {
-        hero.setTint(0x0000FF)
         hero.setVelocity(0)
         hero.anims.play(`circular-attack`).once('animationcomplete', () => {
             this.stateMachine.transition('idle')
-            hero.clearTint()
         })
     }
 }
